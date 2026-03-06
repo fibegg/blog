@@ -1,0 +1,150 @@
+:root {
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ifm-heading-font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.65;
+  --ifm-heading-font-weight: 600;
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #0a0a1a;
+  --ifm-background-surface-color: rgba(255, 255, 255, 0.04);
+  --ifm-color-primary: #34d399;
+  --ifm-color-primary-dark: #1fbd85;
+  --ifm-color-primary-darker: #18a374;
+  --ifm-color-primary-darkest: #0f7a57;
+  --ifm-color-primary-light: #5edcad;
+  --ifm-color-primary-lighter: #7ae3bd;
+  --ifm-color-primary-lightest: #a5ecd4;
+  --ifm-navbar-background-color: rgba(10, 10, 26, 0.85);
+  --ifm-footer-background-color: rgba(10, 10, 26, 0.9);
+  --ifm-font-color-base: #f1f5f9;
+  --ifm-heading-color: #f1f5f9;
+  --ifm-link-color: #34d399;
+  --ifm-link-hover-color: #5edcad;
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(52, 211, 153, 0.12);
+  --accent: #34d399;
+  --accent-glow: rgba(52, 211, 153, 0.3);
+  --text-primary: #f1f5f9;
+  --text-muted: rgba(241, 245, 249, 0.5);
+}
+
+html[data-theme='dark'] {
+  background: linear-gradient(135deg, #0a0a1a, #1b1b2d, #0f1a1f);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.navbar {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.navbar__logo img {
+  height: 28px;
+  width: 28px;
+}
+
+.footer--dark {
+  background: rgba(10, 10, 26, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+article {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+article:hover {
+  border-color: rgba(52, 211, 153, 0.25);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 30px var(--accent-glow);
+}
+
+.blog-list-page .container {
+  max-width: 1100px;
+}
+
+[data-theme='dark'] .blog-post-page .container {
+  max-width: 900px;
+}
+
+.blog-list-page article header h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+}
+
+.blog-list-page article footer .col--3 a,
+.blog-list-page article footer a[class*='blogPostReadMore'] {
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .blog-post-page article {
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+  padding: 0;
+}
+
+[data-theme='dark'] .blog-post-page article:hover {
+  box-shadow: none;
+}
+
+[data-theme='dark'] .tag-cloud a,
+[data-theme='dark'] .pills__item {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .tag-cloud a:hover,
+[data-theme='dark'] .pills__item--active {
+  background: rgba(52, 211, 153, 0.15);
+  border-color: rgba(52, 211, 153, 0.3);
+}
+
+[data-theme='dark'] aside {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.powered-by {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.5px;
+}
+
+.powered-by .brand {
+  color: rgba(52, 211, 153, 0.5);
+}
