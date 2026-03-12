@@ -1,57 +1,140 @@
+/* ═══════════════════════════════════════════
+   Phoenix Quantum — Blog Design System
+   Violet/Purple palette from phoenix-agent-oauth
+   ═══════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 :root {
-  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --ifm-heading-font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ifm-font-family-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ifm-heading-font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --ifm-font-size-base: 15px;
   --ifm-line-height-base: 1.5;
   --ifm-heading-font-weight: 600;
 }
 
 [data-theme='dark'] {
-  --ifm-background-color: #0a0a1a;
+  --ifm-background-color: #0f0f14;
   --ifm-background-surface-color: rgba(255, 255, 255, 0.04);
-  --ifm-color-primary: #34d399;
-  --ifm-color-primary-dark: #1fbd85;
-  --ifm-color-primary-darker: #18a374;
-  --ifm-color-primary-darkest: #0f7a57;
-  --ifm-color-primary-light: #5edcad;
-  --ifm-color-primary-lighter: #7ae3bd;
-  --ifm-color-primary-lightest: #a5ecd4;
-  --ifm-navbar-background-color: rgba(10, 10, 26, 0.85);
-  --ifm-footer-background-color: rgba(10, 10, 26, 0.9);
-  --ifm-font-color-base: #f1f5f9;
-  --ifm-heading-color: #f1f5f9;
-  --ifm-link-color: #34d399;
-  --ifm-link-hover-color: #5edcad;
+  --ifm-color-primary: #a78bfa;
+  --ifm-color-primary-dark: #7c3aed;
+  --ifm-color-primary-darker: #6d28d9;
+  --ifm-color-primary-darkest: #5b21b6;
+  --ifm-color-primary-light: #c4b5fd;
+  --ifm-color-primary-lighter: #ddd6fe;
+  --ifm-color-primary-lightest: #ede9fe;
+  --ifm-navbar-background-color: rgba(15, 15, 20, 0.85);
+  --ifm-footer-background-color: rgba(15, 15, 20, 0.9);
+  --ifm-font-color-base: #e5e7eb;
+  --ifm-heading-color: #e5e7eb;
+  --ifm-link-color: #a78bfa;
+  --ifm-link-hover-color: #c4b5fd;
   --glass-bg: rgba(255, 255, 255, 0.04);
-  --glass-border: rgba(52, 211, 153, 0.12);
-  --accent: #34d399;
-  --accent-glow: rgba(52, 211, 153, 0.3);
-  --text-primary: #f1f5f9;
-  --text-muted: rgba(241, 245, 249, 0.5);
+  --glass-border: rgba(167, 139, 250, 0.15);
+  --accent: #a78bfa;
+  --accent-glow: rgba(167, 139, 250, 0.3);
+  --text-primary: #e5e7eb;
+  --text-muted: rgba(229, 231, 235, 0.5);
 }
 
 html[data-theme='dark'] {
-  background: linear-gradient(135deg, #0a0a1a, #1b1b2d, #0f1a1f);
+  background: linear-gradient(135deg, #0f0f14, #1a1625, #0f0f14);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
 }
 
+/* ── Keyframe Animations (from phoenix-agent-oauth) ── */
+
 @keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
 
-  0%,
-  100% {
-    background-position: 0% 50%;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.5) rotate(180deg); }
+}
+
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 0.3; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes ping-slower {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 0.2; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes explode {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(3); }
+}
+
+@keyframes energy-flow-1 {
+  0% { top: -50%; left: 20%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 150%; left: 80%; opacity: 0; }
+}
+
+@keyframes energy-flow-2 {
+  0% { top: -50%; left: 50%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 150%; left: 50%; opacity: 0; }
+}
+
+@keyframes energy-flow-3 {
+  0% { top: -50%; left: 80%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 150%; left: 20%; opacity: 0; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--accent-glow), 0 15px 35px rgba(0, 0, 0, 0.3);
   }
-
   50% {
-    background-position: 100% 50%;
+    box-shadow: 0 0 40px var(--accent-glow), 0 0 60px rgba(167, 139, 250, 0.12), 0 15px 35px rgba(0, 0, 0, 0.3);
   }
 }
+
+/* Animation utility classes */
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-sparkle { animation: sparkle 2s ease-in-out infinite; }
+.animate-ping-slow { animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite; }
+.animate-ping-slower { animation: ping-slower 4s cubic-bezier(0, 0, 0.2, 1) infinite; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 8s linear infinite; }
+.animate-spin-reverse { animation: spin-reverse 6s linear infinite; }
+.animate-explode { animation: explode 0.8s ease-out forwards; }
+
+/* ── Navbar ── */
 
 .navbar {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.1);
   padding: 0.4rem 0;
 }
 
@@ -73,18 +156,18 @@ html[data-theme='dark'] {
   max-width: 320px;
   height: 100vh;
   height: 100dvh;
-  background: rgba(10, 10, 26, 0.98);
+  background: rgba(15, 15, 20, 0.98);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   z-index: 200;
   overflow-y: auto;
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(167, 139, 250, 0.1);
   padding-top: 0;
 }
 
 .navbar-sidebar .navbar-sidebar__brand {
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.1);
 }
 
 .navbar-sidebar .navbar-sidebar__items {
@@ -100,12 +183,12 @@ html[data-theme='dark'] {
 }
 
 .navbar-sidebar .menu__link:hover {
-  background: rgba(52, 211, 153, 0.08);
+  background: rgba(167, 139, 250, 0.08);
 }
 
 .navbar-sidebar .menu__link--active {
   color: var(--accent);
-  background: rgba(52, 211, 153, 0.1);
+  background: rgba(167, 139, 250, 0.1);
 }
 
 .navbar-sidebar__backdrop {
@@ -124,8 +207,6 @@ html[data-theme='dark'] {
 }
 
 @media (max-width: 996px) {
-
-  /* Keep main logo on right edge */
   .navbar__brand {
     order: 999;
     margin-left: auto;
@@ -133,18 +214,15 @@ html[data-theme='dark'] {
     padding: 0;
   }
 
-  /* Provide spacing on the left for the hamburger menu */
   .navbar__toggle {
     margin-left: 0.75rem;
     margin-right: 0;
   }
 
-  /* Hide the extra logo inside the sidebar */
   .navbar-sidebar__brand .navbar__brand {
     display: none;
   }
 
-  /* Align close cross button properly on the left */
   .navbar-sidebar__brand {
     justify-content: flex-start;
   }
@@ -154,12 +232,10 @@ html[data-theme='dark'] {
     margin-right: auto;
   }
 
-  /* Fix caret arrow visibility securely using Docusaurus CSS variables */
   .navbar-sidebar {
     --ifm-menu-link-sublist-icon-filter: invert(100%) brightness(200%) !important;
   }
 
-  /* Make sidebar items float with perfectly symmetric padding */
   .navbar-sidebar .navbar-sidebar__items {
     padding: 0.5rem 0;
   }
@@ -171,9 +247,7 @@ html[data-theme='dark'] {
   .navbar-sidebar .menu__link {
     margin: 0.25rem 1.25rem;
     border-radius: 8px;
-    /* Rounded pill look on hover */
     width: auto;
-    /* Prevent stretching beyond margin */
   }
 
   .navbar-sidebar .menu__list-item-collapsible {
@@ -182,14 +256,17 @@ html[data-theme='dark'] {
 
   .navbar-sidebar .menu__list-item-collapsible .menu__link {
     margin: 0;
-    /* Let the parent manage margin for collapsible items */
   }
 }
 
+/* ── Footer ── */
+
 .footer--dark {
-  background: rgba(10, 10, 26, 0.9);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(15, 15, 20, 0.9);
+  border-top: 1px solid rgba(167, 139, 250, 0.1);
 }
+
+/* ── Blog Articles ── */
 
 article {
   background: var(--glass-bg);
@@ -203,7 +280,7 @@ article {
 }
 
 article:hover {
-  border-color: rgba(52, 211, 153, 0.25);
+  border-color: rgba(167, 139, 250, 0.25);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3), 0 0 20px var(--accent-glow);
 }
 
@@ -236,6 +313,8 @@ article:hover {
   box-shadow: none;
 }
 
+/* ── Tags & Pills ── */
+
 [data-theme='dark'] .tag-cloud a,
 [data-theme='dark'] .pills__item {
   background: var(--glass-bg);
@@ -246,9 +325,11 @@ article:hover {
 
 [data-theme='dark'] .tag-cloud a:hover,
 [data-theme='dark'] .pills__item--active {
-  background: rgba(52, 211, 153, 0.15);
-  border-color: rgba(52, 211, 153, 0.3);
+  background: rgba(167, 139, 250, 0.15);
+  border-color: rgba(167, 139, 250, 0.3);
 }
+
+/* ── Aside ── */
 
 [data-theme='dark'] aside {
   background: var(--glass-bg);
@@ -259,6 +340,8 @@ article:hover {
   padding: 1.25rem;
 }
 
+/* ── Powered By ── */
+
 .powered-by {
   text-align: center;
   padding: 1.5rem;
@@ -268,8 +351,10 @@ article:hover {
 }
 
 .powered-by .brand {
-  color: rgba(52, 211, 153, 0.5);
+  color: rgba(167, 139, 250, 0.5);
 }
+
+/* ── Social Footer ── */
 
 .footer-social-icons {
   display: flex;
@@ -284,7 +369,7 @@ article:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: rgba(241, 245, 249, 0.35);
+  color: rgba(229, 231, 235, 0.35);
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
@@ -303,7 +388,7 @@ article:hover {
 }
 
 .footer-legal-links a {
-  color: rgba(241, 245, 249, 0.3);
+  color: rgba(229, 231, 235, 0.3);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -314,5 +399,5 @@ article:hover {
 }
 
 .footer-legal-separator {
-  color: rgba(241, 245, 249, 0.15);
+  color: rgba(229, 231, 235, 0.15);
 }
