@@ -19,7 +19,7 @@ const config = {
   url: 'https://blog.playgrounds.dev',
   baseUrl: '/',
 
-  organizationName: 'phoenix-playgrounds',
+  organizationName: 'playgroundsHQ',
   projectName: 'blog',
 
   onBrokenLinks: 'throw',
@@ -92,7 +92,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/phoenix-playgrounds',
+            href: 'https://github.com/playgroundsHQ',
             label: 'GitHub',
             position: 'right',
           },
