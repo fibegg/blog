@@ -16,10 +16,10 @@ const config = {
     v4: true,
   },
 
-  url: 'https://blog.playgrounds.dev',
+  url: 'https://blog.fibe.gg',
   baseUrl: '/',
 
-  organizationName: 'playgroundsHQ',
+  organizationName: 'fibegg',
   projectName: 'blog',
 
   onBrokenLinks: 'throw',
@@ -62,7 +62,7 @@ const config = {
     ({
       metadata: [
         { name: 'description', content: 'Updates, guides, and insights from the Playgrounds.dev team.' },
-        { name: 'keywords', content: 'playgrounds.dev, blog, cloud environments, docker, devops' },
+        { name: 'keywords', content: 'fibe.gg, blog, cloud environments, docker, devops' },
       ],
       colorMode: {
         defaultMode: 'dark',
@@ -77,12 +77,12 @@ const config = {
         },
         items: [
           {
-            href: 'https://playgrounds.dev',
+            href: 'https://fibe.gg',
             label: 'Home',
             position: 'left',
           },
           {
-            href: 'https://docs.playgrounds.dev',
+            href: 'https://docs.fibe.gg',
             label: 'Docs',
             position: 'left',
           },
@@ -92,7 +92,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/playgroundsHQ',
+            href: 'https://github.com/fibegg',
             label: 'GitHub',
             position: 'right',
           },
