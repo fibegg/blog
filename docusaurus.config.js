@@ -2,7 +2,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Playgrounds.dev Blog',
+  title: 'fibe.gg Blog',
   tagline: 'Updates, guides, and insights from the Playgrounds team',
   favicon: 'img/favicon.ico',
 
@@ -42,7 +42,7 @@ const config = {
         blog: {
           routeBasePath: '/',
           showReadingTime: true,
-          blogTitle: 'Playgrounds.dev Blog',
+          blogTitle: 'fibe.gg Blog',
           blogDescription: 'Updates, guides, and insights from the Playgrounds team',
           blogSidebarTitle: 'Recent posts',
           blogSidebarCount: 10,
@@ -61,7 +61,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        { name: 'description', content: 'Updates, guides, and insights from the Playgrounds.dev team.' },
+        { name: 'description', content: 'Updates, guides, and insights from the fibe.gg team.' },
         { name: 'keywords', content: 'fibe.gg, blog, cloud environments, docker, devops' },
       ],
       colorMode: {
@@ -72,7 +72,7 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'Playgrounds.dev',
+          alt: 'fibe.gg',
           src: 'img/logo.png',
         },
         items: [
@@ -104,7 +104,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `© ${new Date().getFullYear()} Playgrounds.dev — All rights reserved.`,
+        copyright: `© ${new Date().getFullYear()} fibe.gg — All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,

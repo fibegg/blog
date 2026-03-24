@@ -1,17 +1,17 @@
 ---
 slug: welcome
-title: Welcome to Playgrounds.dev
+title: Welcome to fibe.gg
 authors: [team]
 tags: [announcement]
 ---
 
-We're excited to launch the Playgrounds.dev blog! This is where we'll share product updates, engineering insights, and guides on getting the most out of your cloud development environments.
+We're excited to launch the fibe.gg blog! This is where we'll share product updates, engineering insights, and guides on getting the most out of your cloud development environments.
 
 <!-- truncate -->
 
-## What is Playgrounds.dev?
+## What is fibe.gg?
 
-Playgrounds.dev gives your team instant, isolated full-stack environments powered by Docker. Whether you need a quick staging preview, a demo environment for a client, or an isolated sandbox for development — spin one up in seconds.
+fibe.gg gives your team instant, isolated full-stack environments powered by Docker. Whether you need a quick staging preview, a demo environment for a client, or an isolated sandbox for development — spin one up in seconds.
 
 ## What to expect
 
